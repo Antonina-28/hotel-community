@@ -3,27 +3,199 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.ico">
+        <link rel="preload" href="./public/assets/fonts/OpenSans-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+        <link rel="preload" href="./public/assets/fonts/OpenSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
         <title>Hotels catalog</title>
     </head>
     <body class="page__body">
         <div id="catalog" class="page__content">
             <header class="header">
-                <div class="container">
-                    <a href="../../">HOME</a>
-                    <h2>CATAL22OG</h2>
+                <div class="header__wrapper">
+                    <svg class="header__logo logo" width="42" height="42">
+                        <use href="/assets/vectors/sprite.svg#logo"></use>
+                    </svg>
+                    <nav class="main-nav main-nav--closed" aria-label="Основная навигация">
+                        <button class="main-nav__toggle button-burger" type="button">
+                            <span class="visually-hidden">Открыть меню</span>
+                        </button>
+                        <ul class="main-nav__list site-list list">
+                            <li class="site-list__item">
+                                <a class="site-list__link" href="#hero">Booking</a>
+                            </li>
+                            <li class="site-list__item">
+                                <a class="site-list__link" href="#facilities">Facilities</a>
+                            </li>
+                            <li class="site-list__item">
+                                <a class="site-list__link" href="src/pages/catalog.html#about">About Us</a>
+                            </li>
+                            <li class="site-list__item">
+                                <a class="site-list__link" href="#location">Location</a>
+                            </li>
+                            <li class="site-list__item">
+                                <a class="site-list__link" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="header__button" type="button">Login</button>
                 </div>
             </header>
             <main class="main">
-                <section>
-                    <div class="container">
-                        <img src="/assets/vectors/shield.svg" alt="">
+                <section class="catalog-slider">
+                    <div class="catalog-slider__wrapper"></div>
+                </section>
+                <section class="hotels">
+                    <div class="hotels__wrapper">
+                        <h2 class="hotels__title title">Our most popular Hotels</h2>
+                        <p class="hotels__description description">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry.</p>
+                        <button class="hotels__button" type="button">View All</button>
+                        <ul class="hotels__list list">
+                        </ul>
+                    </div>
+                </section>
+                <section class="history">
+                    <div class="history__wrapper">
+                        <h2 class="history__title title">Discover our History</h2>
+                        <p class="history__description description">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's</p>
+                        <p class="history__description description">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard
+                            dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <button class="history__button button" type="button">Explore More</button>
+                    </div>
+                </section>
+                <section class="questions">
+                    <div class="questions__wrapper">
+                        <h2 class="questions__title">Frequently Asked Questions</h2>
+                        <p class="questions__description">You can book massages 7 days a week from 6 am to 11 pm, including public holidays.</p>
+                        <div class="questions__accordion">
+                            <button class="questions__button" type="button">How far is nearset bus station ?</button>
+                            <p class="questions__panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                            <button class="questions__button" type="button">Why this project is better than others ?</button>
+                            <p class="questions__panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                            <button class="questions__button" type="button">Estimated time of completion ?</button>
+                            <p class="questions__panel">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="about" id="about">
+                    <div class="about__wrapper">
+                        <h2 class="about__title">About Us</h2>
+                        <p class="about__description description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's</p>
+                        <p class="about__description description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard
+                        dummy Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <button class="about__button button" type="button">Read More</button>
+                    </div>                    
+                </section>
+                <section class="location" id="location">
+                    <h2 class="visually-hidden">Мы находимся</h2>
+                    <div class="location__wrapper">
+                        <img class="location__image" src="/assets/images/map.webp" width="320" height="300" alt="Фрагмент карты">
+                        <div class="location__container">
+                            <h3 class="location__title">Location of our Hotelos</h3>
+                            <p class="location__description description">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry. Lorem Ipsum has been the industry's</p>
+                            <form class="location__form">
+                                <label class="visually-hidden" for="email">Email</label>
+                                <input class="location__input" id="email" type="email" placeholder="Enter your email" required>
+                                <button class="location__button button" type="submit">Contact</button>
+                            </form>
+                        </div>
                     </div>
                 </section>
             </main>
-            <footer class="footer">
-                <div class="container"></div>
+            <footer class="footer" id="contact">
+                <h2 class="visually-hidden">Полезная информация и контакты</h2>
+                <div class="footer__wrapper">
+                    <p class="footer__description description">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry.</p>
+                    <ul class="footer__social social-list list">
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <span class="visually-hidden">Мы в FaceBook</span>
+                                <svg class="social__icon" width="16" height="16" aria-hidden="true">
+                                    <use href="/assets/vectors/sprite.svg#fb"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <span class="visually-hidden">Мы в Instagram</span>
+                                <svg class="social__icon" width="16" height="16" aria-hidden="true">
+                                    <use href="/assets/vectors/sprite.svg#inst"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social-list__item">
+                            <a class="social-list__link" href="#">
+                                <span class="visually-hidden">Мы в Google</span>
+                                <svg class="social__icon" width="16" height="16" aria-hidden="true">
+                                    <use href="/assets/vectors/sprite.svg#google"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="footer__list list">
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">Home</a>
+                            <ul class="footer__sublist list">
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#hero">Booking</a>
+                                </li>
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#facilities">Facilities</a>
+                                </li>
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#location">Location</a>
+                                </li>
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">Help</a>
+                            <ul class="footer__sublist list">
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#about">About Us</a>
+                                </li>
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#">Help center</a>
+                                </li>
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#">Privacy policy</a>
+                                </li>
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#">FAQs</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href="#">Get the app</a>
+                            <ul class="footer__sublist list">
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#">iOS app</a>
+                                </li>
+                                <li class="footer__subitem">
+                                    <a class="footer__sublink" href="#">Android app</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
             </footer>
         </div>
         <script type="module" src="/src/main.js"></script>
+        <!-- <div class="container">
+                    <a href="../../">HOME</a>
+                    <h2>CATAL22OG</h2>
+                </div> -->
+        <!-- <div class="container">
+                        <img src="/assets/vectors/shield.svg" alt="">
+                    </div> -->
     </body>
 </html>
