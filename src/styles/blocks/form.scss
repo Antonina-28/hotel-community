@@ -1,0 +1,101 @@
+@use '../variables' as var;
+
+.form {
+    padding: 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    background-color: var.$white;
+    border-radius: 35px;
+
+    @media (min-width: var.$tablet-width) {
+        position: absolute;
+        left: 40px;
+        bottom: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;      
+        width: 668px;
+        padding-bottom: 15px;
+        z-index: 1;        
+    }
+}
+
+.form__item {
+    position: relative;
+    padding-left: 34px;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px 24px;
+    }
+}
+
+.form__item--guests {
+    @media (min-width: var.$tablet-width) {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+}
+
+.form__item--location::before {
+    background-image: url('/assets/vectors/location.svg')
+}
+
+.form__item--check::before {
+    background-image: url('/assets/vectors/calendar.svg');
+}
+
+.form__item--guests::before {
+    background-image: url('/assets/vectors/person.svg');
+}
+
+.form__label {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.form__input {
+    padding: 8px;
+    border: none;
+
+    @media (min-width: var.$tablet-width) {
+        padding: 10px;
+    }
+}
+
+.form__button {
+    position: relative;
+    font-size: 18px;
+    line-height: 24px;
+
+    @media (min-width: var.$tablet-width) {
+        grid-column: 2/3;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 54px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+        background-image: url('/assets/vectors/search.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 24px 24px;
+
+        @media (min-width: var.$tablet-width) {
+            left: 94px;
+        }
+    }
+}

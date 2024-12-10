@@ -12,9 +12,11 @@
         <div id="app" class="page__content">
             <header class="header">
                 <div class="header__wrapper">
-                    <svg class="header__logo logo" width="42" height="42">
-                        <use href="/assets/vectors/sprite.svg#logo"></use>
-                    </svg>
+                    <a class="header__link" href="#">
+                        <svg class="header__logo logo" width="42" height="42">
+                            <use href="/assets/vectors/sprite.svg#logo"></use>
+                        </svg>
+                    </a>                    
                     <nav class="main-nav main-nav--closed" aria-label="Основная навигация">
                         <button class="main-nav__toggle button-burger" type="button">
                             <span class="visually-hidden">Открыть меню</span>
@@ -37,7 +39,7 @@
                             </li>
                         </ul>
                     </nav>
-                    <button class="header__button" type="button">Login</button>
+                    <button class="header__button button" type="button">Login</button>
                 </div>              
             </header>
             <main class="main">
@@ -47,27 +49,27 @@
                         <p class="hero__description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         <button class="hero__button" type="button">Watch video</button>
                         <form class="hero__form form" action="#" method="post">
-                            <div class="form__item">
+                            <div class="form__item form__item--location">
                                 <label class="form__label" for="location">Location
                                     <input class="form__input" id="location" type="text" name="location" placeholder="United States">
                                 </label>
                             </div>
-                            <div class="form__item">
+                            <div class="form__item form__item--check">
                                 <label class="form__label" for="check-in">Chack in
                                     <input class="form__input" id="check-in" type="text" name="check-in" placeholder="10 Jun 2021">
                                 </label>
                             </div>
-                            <div class="form__item">
+                            <div class="form__item form__item--check">
                                 <label class="form__label" for="check-out">Chack out
                                     <input class="form__input" id="check-out" type="text" name="check-out" placeholder="15 Jun 2021">
                                 </label>
                             </div>
-                            <div class="form__item">
+                            <div class="form__item form__item--guests">
                                 <label class="form__label" for="guests">Rooms for
                                     <input class="form__input" id="guests" type="text" name="guests" placeholder="1 room, 2 guests">
                                 </label>
                             </div>
-                            <button class="form__button" type="submit">Search...</button>                           
+                            <button class="form__button button" type="submit">Search...</button>                           
                         </form>
                     </div>
                 </section>

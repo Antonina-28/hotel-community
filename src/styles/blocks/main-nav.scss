@@ -14,6 +14,10 @@
     background-repeat: no-repeat;
     background-size: 26px 26px;
     background-position: center;
+
+    @media (min-width: var.$tablet-width) {
+        display: none;
+    }
 }
 
 .main-nav--closed .main-nav__toggle {
@@ -24,18 +28,22 @@
     background-image: url("../../../public/assets/vectors/close.svg");
 }
 
-.main-nav--opened .main-nav__list {    
-    position: absolute;
-    top: 72px;
-    left: 0;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    background-color: var.$light-green;
+.main-nav--opened .main-nav__list {
+    @media(max-width: var.$mobile-width-only) {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: var.$light-green;
+    }    
 }
 
 .main-nav--closed .main-nav__list {
-    display: none;
+    @media(max-width: var.$mobile-width-only) {
+        display: none;
+    }   
 }

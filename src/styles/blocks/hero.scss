@@ -1,0 +1,90 @@
+@use '../variables' as var;
+
+.hero {
+    background-color: var.$brand-color-opacity;
+
+    @media (min-width: var.$tablet-width) {
+        position: relative;        
+        display: grid;
+        grid-template-columns: 768px;
+        justify-content: center;
+        border-radius: 35px 35px 0 0;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(11%);
+            width: 344px;
+            background-image: url('/assets/images/hero.webp');
+            background-repeat: no-repeat;
+            background-position: right -40px bottom;
+            border-radius: 0 35px 0 0;
+        }
+    }
+
+    @media (min-width: var.$desktop-width) {
+        grid-template-columns: 1280px;
+    }
+}
+
+.hero__wrapper {
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    @media (min-width: var.$tablet-width) {
+        position: relative;
+        max-width: 344px;
+        margin: 0;
+        padding: 40px;
+        padding-bottom: 200px;
+    }
+}
+
+.hero__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.hero__description {
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var.$secondary-color;
+}
+
+.hero__button {
+    position: relative;
+    padding: 13px 10px 13px 72px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 56px;
+        height: 56px;
+        background-color: var.$white;
+        border-radius: 50%;
+        background-image: url('/assets/vectors/play.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 15px 20px;
+    }
+}
