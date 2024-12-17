@@ -26,6 +26,18 @@
     border: 1px solid var.$brand-color-opacity;
     border-radius: 280px;
     background-color: var.$brand-color-opacity;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border: 1px solid var.$brand-color;
+    }
+
+    &:active {
+      color: var.$white;
+      border: 1px solid var.$brand-color;
+      background-color: var.$brand-color;
+    }
 }
 
 .hotels__list {
